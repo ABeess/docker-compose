@@ -44,7 +44,7 @@ exports.Mailer = class Mailer {
         subject: "Verify message from Education web app",
         html: codeVerifyContent,
       });
-      return await client.set(email, code, { EX: 60 * 10 });
+      return await client.set(email, code, "EX", 60 * 10);
     } catch (err) {
       return err;
     }

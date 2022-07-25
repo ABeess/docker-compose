@@ -42,7 +42,7 @@ exports.RefreshToken = class RefreshToken {
       };
       const newRefreshToken = await signRefreshToken();
       if (queryChecking(params, "login")) {
-        await client.set(_id, newRefreshToken, { EX: 3600 * 24 * 365 });
+        await client.set(_id, newRefreshToken, "EX", 3600 * 24 * 365);
         return "Created refresh token";
       } else {
         const refreshToken = getRefreshToken(params);
