@@ -50,7 +50,6 @@ export default function LoginForm() {
   const onSubmit = async (data) => {
     try {
       const loginRes = await login(data);
-      console.log(loginRes);
       if (loginRes?.code === 409) {
         return enqueueSnackbar('Bạn đã đăng nhập bằng GG hoặc FB trước đó!', {
           variant: 'info',
