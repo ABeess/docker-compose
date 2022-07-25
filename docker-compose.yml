@@ -1,4 +1,4 @@
-version: "2.6.1"
+version: "3.3"
 services:
   server:
     image: node:16-alpine
@@ -13,7 +13,7 @@ services:
     networks:
       - webproxy
   client-user:
-    image: nextjs:latest
+    image: node:16-alpine
     ports:
       - "3000:3000"
     command: sh -c "yarn install && yarn build  && yarn start"
