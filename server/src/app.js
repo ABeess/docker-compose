@@ -37,7 +37,7 @@ app.use(
     origin: [
       "http://localhost:3039",
       "http://localhost:3034",
-      process.env.SECRET_FRONTEND_DOMAIN,
+      process.env.CLIENT_URL,
     ],
     allowedHeaders: [
       "Content-Type",
