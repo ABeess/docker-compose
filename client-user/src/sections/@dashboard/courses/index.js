@@ -1,0 +1,14 @@
+export { default as CourseCard } from './CourseCard';
+export { default as CourseFilter } from './CourseFilter';
+export { default as CourseSearch } from './CourseSearch';
+export { default as CourseRightNav } from './CourseRightNav';
+export { default as CourseDetailHero } from './CourseDetailHero';
+export { default as CourseDetailRating } from './CourseDetailRating';
+export { default as CourseDetailRecent } from './CourseDetailRecent';
+export { default as CourseDetailCommentList } from './CourseDetailCommentList';
+export { default as CourseDetailsCommentForm } from './CourseDetailsCommentForm';
+export { default as CourseDetailCart } from './CourseDetailCart';
+export { default as CourseDetailList } from './CourseDetailList';
+// export { default as CourseDetailContent } from './CourseDetailContent';
+// export { default as BlogNewPostForm } from './BlogNewPostForm';
+// export { default as BlogPostCommentItem } from './BlogPostCommentItem';
