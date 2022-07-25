@@ -16,13 +16,27 @@ services:
     image: node:16-alpine
     container_name: client-user
     ports:
-      - "3000:3000"
+      - "3050:3050"
     command: sh -c "yarn install && yarn build  && yarn start"
     volumes:
       - ./client-user:/usr/src/app
       - /usr/src/app/node_modules
       - /usr/src/app/.next
     working_dir: /usr/src/app
+    restart: always
+    networks:
+      - webproxy
+  client-admin:
+    image: node:16-alpine
+    container_name: client-admin
+    ports:
+      - "3060:3060"
+    command: sh -c "yarn install && yarn build && npm install --global serve && serve -l 3060 -s build"
+    volumes:
+      - ./client-admin:/usr/src/admin
+      - /usr/src/admin/node_modules
+      - /usr/src/admin/build
+    working_dir: /usr/src/admin
     restart: always
     networks:
       - webproxy

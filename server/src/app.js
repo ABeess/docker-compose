@@ -36,7 +36,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3039",
-      "http://localhost:3034",
+      "http://34.87.93.1:3060",
       process.env.CLIENT_URL,
     ],
     allowedHeaders: [

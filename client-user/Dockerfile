@@ -11,6 +11,6 @@ ADD . .
 
 RUN yarn build
 
-EXPOSE 3000
+EXPOSE 3050
 
 CMD yarn start
