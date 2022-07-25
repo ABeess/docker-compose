@@ -56,14 +56,14 @@ export default function LoginForm() {
           variant: 'info',
         });
       }
-      // await refreshToken({ payload: { _id: loginRes?.user._id, role: loginRes?.user.role }, login: true });
+      await refreshToken({ payload: { _id: loginRes?.user._id, role: loginRes?.user.role }, login: true });
       setAuthState((prev) => ({
         ...prev,
-        isAuthenticated: false,
+        isAuthenticated: true,
         user: loginRes?.user,
         accessToken: loginRes?.accessToken,
       }));
-      // enqueueSnackbar('Chào mừng bạn đến với Education');
+      enqueueSnackbar('Chào mừng bạn đến với Education');
     } catch (error) {
       if (error?.code === 401) {
         enqueueSnackbar('Tài khoản hoặc mật khẩu không đúng!', { variant: 'error' });
