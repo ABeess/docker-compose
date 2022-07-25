@@ -12,7 +12,7 @@ module.exports = withTM({
   swcMinify: false,
   trailingSlash: true,
   env: {
-    HOST_API_KEY: 'http://localhost:3040',
+    HOST_API_KEY: 'http://34.87.93.1:3040',
     // FIREBASE AUTH
     FIREBASE_API_KEY: '',
     FIREBASE_AUTH_DOMAIN: '',
